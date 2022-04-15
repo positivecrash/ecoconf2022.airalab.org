@@ -1,0 +1,23 @@
+{
+  "name": "blockchaininroboticsandai.org",
+  "version": "1.0.0",
+  "description": "Clean HTML for blockchaininroboticsandai.org, website for online workshop within IROS 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/positivecrash/blockchaininroboticsandai.org.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/positivecrash/blockchaininroboticsandai.org/issues"
+  },
+  "homepage": "https://github.com/positivecrash/blockchaininroboticsandai.org#readme",
+  "dependencies": {
+    "in-view": "^0.6.1",
+    "seamless-scroll-polyfill": "^1.2.4"
+  }
+}
