@@ -90,7 +90,7 @@ body {
     --color-gray-light: #F7F7F8;
     --color-gray-dark: #313233;
 
-    --font-family: "Arial Black", sans-serif;
+    --font-family: 'Montserrat', 'Arial Black', sans-serif;
     --font-size: 1.1rem;
     --space: 1rem;
 
@@ -449,6 +449,13 @@ header .text:not(:last-child) {
 
 /* end of CARD */
 
+#nav-about {
+    padding-top: calc(var(--space) * 10)
+}
+
+#nav-about > section:first-child {
+    margin-top: 0;
+}
 
 
 /* TABLET */
@@ -474,6 +481,12 @@ header .text:not(:last-child) {
 /* MOBILE */
 
 @media screen and (max-width: 620px) {
+
+    body {
+        --space: 0.5rem;
+        --font-size: 0.8rem;
+    }
+
     .navigation > .layout {
         display: block;
     }
@@ -493,6 +506,13 @@ header .text:not(:last-child) {
     }
 }
 
+@media screen and (max-width: 520px) {
+    .card {
+        --avatar-width: 4rem;
+        gap: var(--space)
+    }
+}
+
 /* END OF MOBILE */
 
 
@@ -501,13 +521,8 @@ header .text:not(:last-child) {
 
 @media screen and (max-width: 380px), screen and (max-height: 650px) {
 
-    body {
-        --space: 0.5rem;
-        --font-size: 1rem;
-    }
-
     header {
-        padding-top: calc(var(--space) * 13);
+        padding-top: calc(var(--space) * 23);
         padding-bottom: calc(var(--space) * 24);
     }
 
