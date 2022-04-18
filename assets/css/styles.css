@@ -327,6 +327,10 @@ ol.list-numbers.ver li:before {
     display: inline-block;
 }
 
+.navigation-links a {
+    color: var(--color-dark)
+}
+
 .navigation-logo {
     color: var(--color-dark) !important
 }
@@ -349,9 +353,21 @@ header {
     min-height: 100vh;
     overflow: hidden;
     position: relative;
-    background: url(../images/header-background.jpeg) no-repeat 50% 50%;
+    background: url(../images/header-background.jpg) no-repeat 50% 50%;
     background-size: cover;
     text-align: center;
+    color: var(--color-light)
+}
+
+header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 header > .layout {
@@ -379,16 +395,18 @@ header .text:not(:last-child) {
     align-items: center;
     justify-content: center;
     line-height: 1;
-    width: calc(var(--space) * 4);
+    /* width: calc(var(--space) * 4);
     height: calc(var(--space) * 4);
     border-radius: calc(var(--space) * 4);
-    background-color: rgba(255, 255, 255, 0.418);
-    color: var(--color-dark);
+    background-color: rgba(255, 255, 255, 0.418); */
+    color: var(--color-light);
     transition: 0.2s ease all;
+    font-size: 300%;
 }
 
 .header-more:hover {
-    background-color: rgba(255, 255, 255)
+    /* background-color: rgba(255, 255, 255) */
+    transform: translateY(10%);
 }
 /* END OF HEADER BANNER */
 
@@ -450,7 +468,8 @@ header .text:not(:last-child) {
 /* end of CARD */
 
 #nav-about {
-    padding-top: calc(var(--space) * 10)
+    padding-top: calc(var(--space) * 10);
+    margin-top: 0;
 }
 
 #nav-about > section:first-child {
