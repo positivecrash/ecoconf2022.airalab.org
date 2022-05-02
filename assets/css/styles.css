@@ -469,6 +469,12 @@ header .text:not(:last-child) {
     --avatar-width: 11rem;
 }
 
+.card-info-title {
+    display: inline;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+}
+
 /* end of CARD */
 
 #nav-about {
