@@ -94,12 +94,18 @@ body {
     --font-size: 1.1rem;
     --space: 1rem;
 
+    --avatar-back-1: #4A6EE3;
+    --avatar-back-2: #AF088F;
+    --avatar-back-3: #E2E26B;
+    --avatar-back-4: #56C9BC;
+
     color: var(--color-dark);
     background-color: var(--color-gray-light);
     font-family: var(--font-family);
     font-size: var(--font-size);
     line-height: 1.7;
     text-transform: uppercase;
+    padding-bottom: calc(var(--space) * 10);
 }
 
 body *::selection {
@@ -180,18 +186,27 @@ a:hover {
 
 section {
     margin-top: calc(var(--space) * 10);
-    margin-bottom: calc(var(--space) * 10);
 }
 
-.section-dark {
+section section {
+    margin-top: calc(var(--space) * 5);
+}
+
+.section-dark, .section-darkest {
     background-color: var(--color-gray-dark);
     color: var(--color-light);
     padding-top: calc(var(--space) * 5);
     padding-bottom: calc(var(--space) * 5);
 }
 
-.section-dark section:first-child { margin-top: 0; }
-.section-dark section:last-child { margin-bottom: 0; }
+.section-darkest {
+    background-color: var(--color-dark);
+}
+
+.section-dark section:first-child, .section-darkest section:first-child { margin-top: 0; }
+.section-dark section:last-child, .section-darkest section:last-child { margin-bottom: 0; }
+
+.section-color + .section-color { margin-top: 0; }
 
 .grid-4, .grid-3, .grid-2 {
     display: grid;
@@ -241,11 +256,19 @@ ol.list-numbers.ver li:before {
 }
 
 .green { color: var(--color-green) }
-.green-background {
+.green-background, .purple-background, .gray-background {
     display: inline-block;
     background-color: var(--color-green);
     color: var(--color-light);
     padding: 0.4rem 0.8rem;
+}
+
+.purple-background {
+    background-color: var(--avatar-back-2);
+}
+
+.gray-background {
+    background-color: var(--color-gray-dark);
 }
 
 .grid-logo img {
@@ -261,6 +284,8 @@ ol.list-numbers.ver li:before {
 .icon-big {
     font-size: 300%;
 }
+
+.block { display: block; }
 
 /* END OF BASIC & UTILS*/
 
@@ -424,11 +449,6 @@ header .text:not(:last-child) {
 }
 
 .card-avatar {
-    --avatar-back-1: #4A6EE3;
-    --avatar-back-2: #AF088F;
-    --avatar-back-3: #E2E26B;
-    --avatar-back-4: #56C9BC;
-
     width: var(--avatar-width);
     height: var(--avatar-width);
     border-radius: var(--avatar-width);
@@ -485,6 +505,20 @@ header .text:not(:last-child) {
 #nav-about > section:first-child {
     margin-top: 0;
 }
+
+
+/* SHEDULE */
+.shedule-item-1 {
+    display: grid;
+    grid-template-columns: 150px auto;
+    margin-bottom: calc(var(--space) * 4);
+    gap: calc(var(--space) * 3)
+}
+
+.shedule-item-1 .fa-solid {
+    margin-right: var(--space);
+}
+/* end of SHEDULE */
 
 
 /* TABLET */
