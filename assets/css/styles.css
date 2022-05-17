@@ -520,6 +520,17 @@ header .text:not(:last-child) {
 }
 /* end of SHEDULE */
 
+.partners .grid-3 {
+    text-align: center;
+}
+
+.partners .grid-3 img {
+    display: block;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto
+}
+
 
 /* TABLET */
 
